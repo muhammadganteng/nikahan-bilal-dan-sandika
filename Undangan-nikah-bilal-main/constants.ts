@@ -13,8 +13,8 @@ export const WEDDING_DATA = {
   
   heroImage: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?q=80&w=1000&auto=format&fit=crop",
   coverImage: "https://images.unsplash.com/photo-1519741497674-611481863552?q=80&w=1000&auto=format&fit=crop",
-  bridePhoto: "Undangan-nikah-bilal-main/img/CML.jpeg",
-  groomPhoto: "Undangan-nikah-bilal-main/img/CMP.jpeg",
+  bridePhoto: "Undangan-nikah-bilal-main/public/img/CML.jpeg",
+  groomPhoto: "Undangan-nikah-bilal-main/public/img/CMP.jpeg",
   story: [
     { date: "12 Januari 2022", title: "Pertemuan Pertama", desc: "Awal dari segalanya, dimana takdir mempertemukan kita di tempat yang tak terduga." },
     { date: "20 Mei 2025", title: "Lamaran", desc: "Satu langkah lebih dekat menuju janji suci yang kita impikan." }
