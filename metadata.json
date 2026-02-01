@@ -1,0 +1,8 @@
+{
+  "name": "EleganceInvite - Digital Wedding Invitation & Management System",
+  "description": "A professional digital invitation platform featuring an admin dashboard, real-time guestbook (CRUD), visitor analytics, and RSVP management powered by Firebase and Framer Motion.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}

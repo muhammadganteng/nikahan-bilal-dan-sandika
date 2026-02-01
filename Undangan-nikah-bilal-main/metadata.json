@@ -1,0 +1,8 @@
+{
+  "name": "Premium Digital Wedding Invitation",
+  "description": "An elegant, mobile-first digital wedding invitation with personalized guest names, sessions-based content, and smooth animations.",
+  "requestFramePermissions": [
+    "camera",
+    "microphone"
+  ]
+}
