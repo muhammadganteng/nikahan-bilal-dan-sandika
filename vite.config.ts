@@ -5,6 +5,8 @@ import react from '@vitejs/plugin-react';
 export default defineConfig(({ mode }) => {
     const env = loadEnv(mode, '.', '');
     return {
+      root: '.',
+      publicDir: 'Undangan-nikah-bilal-main/public',
       server: {
         port: 3000,
         host: '0.0.0.0',

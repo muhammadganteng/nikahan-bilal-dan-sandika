@@ -9,16 +9,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Inter:wght@300;400;500;600&family=Great+Vibes&family=Dancing+Script:wght@400..700&display=swap" rel="stylesheet">
     <style>
+      /* Classic Minimalist & Soft Gradient palette */
       :root {
-        --sage: #5B705B;
-        --cream: #FCFAF7;
+        --primary-blue: #579BB1;
+        --deep-beige: #E1D7C6;
+        --light-cream: #ECE8DD;
+        --off-white: #F8F4EA;
       }
       html {
         scroll-behavior: smooth;
       }
       body {
         font-family: 'Inter', sans-serif;
-        background-color: #f8f8f8;
+        background-color: var(--off-white);
         color: #333;
         margin: 0;
         overflow-x: hidden;
@@ -30,12 +33,71 @@
         width: 100%;
         max-width: 450px;
         margin: 0 auto;
-        background-color: var(--cream);
+        background-color: var(--off-white);
         min-height: 100vh;
-        box-shadow: 0 0 50px rgba(0,0,0,0.1);
+        box-shadow: 0 0 50px rgba(0,0,0,0.08);
       }
-      .bg-sage { background-color: var(--sage); }
-      .text-sage { color: var(--sage); }
+      /* Primary & accent utilities */
+      .bg-primary { background-color: var(--primary-blue); }
+      .text-primary { color: var(--primary-blue); }
+      .bg-accent { background-color: var(--light-cream); }
+      .bg-off-white { background-color: var(--off-white); }
+      .bg-deep-beige { background-color: var(--deep-beige); }
+      /* Legacy alias for components still using sage */
+      .bg-sage { background: linear-gradient(135deg, var(--primary-blue) 0%, rgba(87,155,177,0.9) 100%); }
+      .text-sage { color: var(--primary-blue); }
+      /* Soft diagonal gradients - dreamy, low opacity */
+      .gradient-soft {
+        background: linear-gradient(135deg, rgba(87,155,177,0.08) 0%, rgba(236,232,221,0.35) 45%, rgba(248,244,234,0.25) 100%);
+      }
+      .gradient-card {
+        background: linear-gradient(145deg, rgba(255,255,255,0.95) 0%, rgba(236,232,221,0.4) 50%, rgba(248,244,234,0.3) 100%);
+      }
+      .gradient-button {
+        background: linear-gradient(135deg, #579BB1 0%, rgba(87,155,177,0.92) 50%, rgba(129,168,182,0.85) 100%);
+        color: #F8F4EA;
+      }
+      .gradient-button:hover {
+        background: linear-gradient(135deg, #4a8a9e 0%, #579BB1 50%, #6aa8bb 100%);
+        color: #F8F4EA;
+      }
+      /* Section accent background */
+      .section-accent { background-color: var(--light-cream); }
+      /* Cover doors - soft diagonal blue-to-cream gradient (dreamy) */
+      .door-gradient {
+        background: linear-gradient(135deg, #579BB1 0%, rgba(87,155,177,0.92) 35%, rgba(225,215,198,0.4) 100%);
+      }
+      /* Intro section gradient (cream – primary – cream) */
+      .gradient-intro {
+        background: linear-gradient(135deg, rgba(225, 215, 198, 1) 0%, rgba(87, 155, 177, 1) 35%, rgba(225, 215, 198, 1) 100%);
+      }
+      /* 3D effect for SVG icon (heart) – perspective, shadow, tilt */
+      .heart-3d {
+        transform: perspective(600px) rotateY(-6deg) rotateX(8deg);
+        filter: drop-shadow(4px 6px 8px rgba(87, 155, 177, 0.25)) drop-shadow(0 12px 24px rgba(0, 0, 0, 0.12));
+      }
+      /* 3D effect for text – depth, shadow, subtle tilt */
+      .text-3d {
+        text-shadow:
+          1px 1px 0 rgba(0,0,0,0.08),
+          2px 2px 0 rgba(0,0,0,0.06),
+          3px 3px 4px rgba(0,0,0,0.1),
+          4px 4px 8px rgba(0,0,0,0.06);
+        transform: perspective(500px) rotateX(2deg);
+      }
+      .text-3d-strong {
+        text-shadow:
+          2px 2px 0 rgba(0,0,0,0.12),
+          4px 4px 0 rgba(0,0,0,0.08),
+          6px 6px 8px rgba(0,0,0,0.15),
+          8px 8px 16px rgba(0,0,0,0.1);
+        transform: perspective(500px) rotateX(3deg);
+      }
+      /* 3D for SVG / icons in sections */
+      .svg-3d {
+        filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.08)) drop-shadow(4px 4px 8px rgba(0,0,0,0.1));
+        transform: perspective(400px) rotateY(-2deg) rotateX(2deg);
+      }
       
       /* Smooth appearance for imagery */
       img {

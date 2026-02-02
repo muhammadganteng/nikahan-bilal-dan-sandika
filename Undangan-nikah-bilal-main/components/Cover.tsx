@@ -13,20 +13,20 @@ interface CoverProps {
 const Cover: React.FC<CoverProps> = ({ guest, onOpen }) => {
   return (
     <div className="fixed inset-0 z-[100] max-w-[450px] mx-auto overflow-hidden pointer-events-none">
-      {/* Pintu Kiri */}
+      {/* Pintu Kiri - soft blue-to-cream gradient */}
       <motion.div
         exit={{ x: '-100%', transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] } }}
-        className="absolute top-0 left-0 w-1/2 h-full bg-sage z-20 pointer-events-auto border-r border-white/10"
+        className="absolute top-0 left-0 w-1/2 h-full door-gradient z-20 pointer-events-auto border-r border-white/10"
       >
         <div className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-1/2 z-30">
           {/* Bagian dari segel akan menempel di pintu kiri */}
         </div>
       </motion.div>
 
-      {/* Pintu Kanan */}
+      {/* Pintu Kanan - soft blue-to-cream gradient */}
       <motion.div
         exit={{ x: '100%', transition: { duration: 1.5, ease: [0.65, 0, 0.35, 1] } }}
-        className="absolute top-0 right-0 w-1/2 h-full bg-sage z-20 pointer-events-auto border-l border-white/10"
+        className="absolute top-0 right-0 w-1/2 h-full door-gradient z-20 pointer-events-auto border-l border-white/10"
       />
 
       {/* Konten di tengah pintu (Segel & Info) */}
@@ -34,7 +34,7 @@ const Cover: React.FC<CoverProps> = ({ guest, onOpen }) => {
         exit={{ opacity: 0, scale: 0.8, transition: { duration: 0.5 } }}
         className="absolute inset-0 z-30 flex flex-col items-center justify-center pointer-events-none"
       >
-        <div className="bg-sage p-12 flex flex-col items-center pointer-events-auto">
+        <div className="door-gradient p-12 flex flex-col items-center pointer-events-auto">
           <motion.p 
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
@@ -53,7 +53,7 @@ const Cover: React.FC<CoverProps> = ({ guest, onOpen }) => {
             onClick={onOpen}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="w-24 h-24 rounded-full border-2 border-white/30 bg-[#8B5E3C] text-white flex flex-col items-center justify-center shadow-2xl group transition-colors hover:bg-amber-900"
+            className="w-24 h-24 rounded-full border-2 border-white/30 gradient-button text-[#F8F4EA] flex flex-col items-center justify-center shadow-2xl group transition-colors"
           >
             <MailOpen className="mb-1" size={24} />
             <span className="text-[10px] uppercase font-bold tracking-tighter">Buka</span>

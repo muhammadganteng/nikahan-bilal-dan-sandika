@@ -36,7 +36,7 @@ const MusicPlayer: React.FC<MusicPlayerProps> = ({ url, isPlaying, onToggle }) =
             animate={{ rotate: 360 }} 
             transition={{ duration: 6, repeat: Infinity, ease: "linear" }}
           >
-            <Music size={22} className="text-sage" />
+            <Music size={22} className="text-primary" />
           </motion.div>
         ) : (
           <VolumeX size={20} className="text-gray-300" />

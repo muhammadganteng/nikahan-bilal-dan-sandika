@@ -36,7 +36,7 @@ const Countdown: React.FC<CountdownProps> = ({ targetDate }) => {
     <motion.div 
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
-      className="bg-white/10 backdrop-blur-md text-white py-4 px-2 rounded-3xl border border-white/20 shadow-2xl flex items-center justify-center mx-auto w-fit"
+      className="bg-[#579BB1]/15 backdrop-blur-md text-white py-4 px-2 rounded-3xl border border-white/25 shadow-2xl flex items-center justify-center mx-auto w-fit"
     >
       <TimeBox value={timeLeft.days} label="Hari" />
       <TimeBox value={timeLeft.hours} label="Jam" />
